@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int num=0,ok,n,max=0,sumav,colb,randb,cola,suma,rand,i,j,A[50][50],B[50][50];
+    char s1[200];
+    char s2[200];
+    char var[50];
+
+    printf("Introduceti sir 1:\n");
+    gets(s1);
+    printf("Introduceti sir 2:\n");
+    gets(s2);
+
+    for(i=0; i<strlen(s1); i++)
+    {ok=0;
+
+
+        for(j=0; j<strlen(s2); j++)
+        {
+
+            if(s1[i]==s2[j]){
+                for(int a=0; a<strlen(var); a++)
+                    if(s1[i]==var[a])
+                    {
+                        ok=1;
+                        break;
+                    }
+            if(ok!=1&&s1[i]!=' ')
+            {
+                var[num]=s1[i];
+                num++;
+            }}
+        }
+    }
+
+
+    for(i=0; i<strlen(var); i++)
+        printf("%c", var[i]);
+
+    return 0;
+}
