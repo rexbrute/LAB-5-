@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int var[50],n,max=0,sumav,colb,randb,cola,suma,rand,i,j,A[50][50],B[50][50];
+    printf("randuri= ");
+    scanf("%d", &rand);
+
+
+    for(i = 0; i < rand; i++)
+    {
+        for(j = 0; j < rand; j++)
+        {
+            printf("A[%d][%d]=", i,j);
+            scanf("\n%d", &A[i][j]);
+        }
+    }
+
+    for(i=0; i<rand; i++)
+    {
+        suma=0;
+        for(j=0; j<rand; j++)
+        {
+            suma+=A[i][j];
+        }
+        if(suma>max)
+        {
+            max=suma;
+            n=i;
+        }
+    }
+
+    for(j=0; j<rand; j++)
+        var[j]=A[n][j];
+    for(i=0; i<rand; i++)
+        printf("%3d", var[i]);
+
+
+
+    return 0;
+}
