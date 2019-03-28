@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int m,x[50],y[50],a[50],b[50],n,min=1000,max=0,col,rand,i,j,A[50][50];
+    printf("randuri= ");
+    scanf("%d", &rand);
+    printf("coloane= ");
+    scanf("%d", &col);
+
+
+    for(i = 0; i < rand; i++)
+    {
+        for(j = 0; j < col; j++)
+        {
+            printf("A[%d][%d]=", i,j);
+            scanf("\n%d", &A[i][j]);
+        }
+    }
+
+    for(j=0; j<col; j++)
+        for(i=0; i<rand; i++)
+            if(A[i][j]<min){
+                min=A[i][j];
+                x[j]=i;
+                y[j]=j;}
+    for(i=0; i<rand; i++)
+        for(j=0; j<col; j++)
+            if(A[i][j]>max)
+            {
+                max=A[i][j];
+                a[i]=i;
+                b[i]=j;
+
+            }
+
+    printf("\nElementul maxim de pe linia ? ");
+    scanf("%d",&n);
+    printf("A[%d][%d]",a[n],b[n]);
+    printf("\nElementul minim de pe coloana ? ");
+    scanf("%d",&m);
+    printf("A[%d][%d]",x[m],y[m]);
+
+    return 0;
+}
